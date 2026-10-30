@@ -47,12 +47,12 @@ ON l.store_id = r.store_id
 GROUP BY  r.region
 ORDER BY profit_margin DESC
 ```
-## Result
+### Result
 ![Regional Profitability Query Result](docs/Result%20SR1.JPG)
 
 The results show all regions and their respective performance indicators. Interestingly, London, the region with the highest revenue, **is the only region with a profit margin below 10%**, recording just 8.45%.
 
-## Why Is This Happening?
+### Why Is This Happening?
 
 This raises a further question: why is London's profit margin so low despite generating the highest revenue?
 
@@ -71,4 +71,23 @@ ON l.store_id = r.store_id
 GROUP BY region
 ```
 
-## Result
+### Result
+![Regional Operating Cost Breakdown](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR2.JPG)
+
+The result above shows that London's rent ratio is notably higher than every other region, while its salary ratio is not the highest. This makes rent a strong area to investigate further.
+
+### Let's go!!!
+Now, let's investigate the average monthly rent  in the regions.
+
+```sql
+SELECT
+	region,
+	ROUND(AVG(l.monthly_rent_gbp),2) AS average_monthly_rent
+FROM fact_monthly_sales AS l
+INNER JOIN dim_store AS r
+ON l.store_id = r.store_id
+GROUP BY region
+ORDER BY average_monthly_rent DESC
+```
+
+### Result
