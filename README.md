@@ -93,4 +93,4 @@ ORDER BY average_monthly_rent DESC
 ### Result
 ![Regional Profitability Analysis](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR3.JPG)
 
-Turns out the stores in London an average of £11,744.12 on rent making it the region that spends the most on rent, followed by South-East with £8,293.26 GBP. Interestingly, the difference of London and South-East average monthly rent is £83.38% of West-Midlands's average monthly rent.
+Turns out the stores in London an average of £11,744.12 on rent making it the region that spends the most on rent, followed by South-East with £8,293.26 GBP. Interestingly, the difference of London and South-East average monthly rent is 83.38% of West-Midlands's average monthly rent.
