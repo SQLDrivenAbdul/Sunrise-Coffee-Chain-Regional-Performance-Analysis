@@ -48,4 +48,27 @@ GROUP BY  r.region
 ORDER BY profit_margin DESC
 ```
 ## Result
+![Regional Profitability Query Result](docs/Result%20SR1.JPG)
 
+The results show all regions and their respective performance indicators. Interestingly, London, the region with the highest revenue, **is the only region with a profit margin below 10%**, recording just 8.45%.
+
+## Why Is This Happening?
+
+This raises a further question: why is London's profit margin so low despite generating the highest revenue?
+
+To investigate, I will examine the expenses across the regions to understand where the money is going. The query shows each operating cost as a percentage of regional revenue, including cost of goods sold, rent, salaries, and loyalty redemption costs.
+
+```sql
+SELECT
+	region,
+	ROUND(SUM(l.total_monthly_cogs_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS cogs,
+	ROUND(SUM(l.monthly_rent_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS rent,
+	ROUND(SUM(l.monthly_staffing_cost_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS salary,
+	ROUND(SUM(l.loyalty_redemption_cost_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS loyalty_redemption_cost
+FROM fact_monthly_sales AS l
+INNER JOIN dim_store AS r
+ON l.store_id = r.store_id
+GROUP BY region
+```
+
+## Result
