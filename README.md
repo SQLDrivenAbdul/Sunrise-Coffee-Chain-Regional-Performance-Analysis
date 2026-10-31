@@ -116,4 +116,10 @@ GROUP BY store_name
 ORDER BY profit_margin DESC
 ```
 ## Result
+![Store-Level Profitability Analysis](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR4.JPG)
 
+Interestingly, the London stores with the highest profit margins also maintain relatively lower salary or rent costs. Sunrise Coffee West London Quarter, for instance, spends just 18.49% of its revenue on salaries and records the highest profit margin at 20.54%. It is followed by Sunrise Coffee Central London House, with rent accounting for 17.59% of its revenue.
+
+At the bottom of the ranking is Sunrise Coffee South London Corner. Although rent accounts for just 13.31% of its revenue, staffing costs consume more than 50%, significantly affecting its profitability.
+
+In essence, controlling operating costs, particularly rent and staffing expenses, appears to be an important factor distinguishing the more profitable London stores from the less profitable ones.
