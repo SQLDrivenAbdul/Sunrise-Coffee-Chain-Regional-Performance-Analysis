@@ -94,3 +94,26 @@ ORDER BY average_monthly_rent DESC
 ![Regional Profitability Analysis](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR3.JPG)
 
 Turns out London stores pay an average of £11,744.12 on rent making it the region that spends the most on rent, followed by South-East with £8,293.26 GBP. Interestingly, the difference of London and South-East average monthly rent is 83.38% of West-Midlands's average monthly rent.
+
+## Store-level 
+
+All stores at Sunrise Coffee Chain have operated for 24 months. The query below shows the London stores and their performance indicators, including the number of months the store ran at loss.
+
+```sql
+SELECT 
+	store_name,
+	ROUND(SUM(l.total_monthly_cogs_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS cogs,
+	ROUND(SUM(l.monthly_rent_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS rent,
+	ROUND(SUM(l.monthly_staffing_cost_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS salary,
+	ROUND(SUM(l.loyalty_redemption_cost_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS loyalty_redemption_cost,
+	ROUND(SUM(l.net_profit_gbp)/SUM(l.total_monthly_revenue_gbp)*100,2) AS profit_margin,
+	COUNT(CASE WHEN l.net_profit_gbp < 0 THEN 1 END) AS month_at_loss
+FROM fact_monthly_sales AS l
+INNER JOIN dim_store AS r
+ON l.store_id = r.store_id
+WHERE region = 'London'
+GROUP BY store_name
+ORDER BY profit_margin DESC
+```
+## Result
+
