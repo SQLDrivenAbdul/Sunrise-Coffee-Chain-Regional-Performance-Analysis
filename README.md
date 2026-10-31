@@ -122,4 +122,18 @@ Interestingly, the London stores with the highest profit margins also maintain r
 
 At the bottom of the ranking is Sunrise Coffee South London Corner. Although rent accounts for just 13.31% of its revenue, staffing costs consume more than 50%, significantly affecting its profitability.
 
+## Recommendations
+
+- **Review London's rental expenses:** Management should renegotiate lease agreements where possible and prioritise locations with more favourable rental costs when considering future expansion.
+- **Optimise staffing costs:** Investigate staffing levels and scheduling at underperforming stores, particularly South London Corner, where staffing costs consume over 50% of revenue.
+- **Prioritise profitable locations:** Use the performance of stores such as West London Quarter as a benchmark when evaluating potential expansion sites.
+
 In essence, controlling operating costs, particularly rent and staffing expenses, appears to be an important factor distinguishing the more profitable London stores from the less profitable ones.
+
+
+## Conclusion
+
+The analysis reveals significant differences in profitability across Sunrise Coffee Chain's regions and stores. Despite generating the highest revenue, London records the lowest regional profit margin at 8.45%, largely due to its relatively high rental expenses. At store level, differences in rent and staffing costs further explain variations in profitability.
+
+Going forward, Sunrise Coffee Chain should prioritise cost efficiency and use existing store performance to guide its 2025 expansion decisions. **Higher revenue does not necessarily translate into higher profitability; the ability to control operating costs is equally important.**
+
