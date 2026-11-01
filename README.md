@@ -1,5 +1,19 @@
 # Sunrise Coffee Chain: Regional Profitability Analysis
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Business Problem](#business-problem)
+- [Project Objectives](#project-objectives)
+- [Tools and Technologies](#tools-and-technologies)
+- [SQL-Based Exploratory Data Analysis](#sql-based-exploratory-data-analysis)
+  - [Regional Profitability Analysis](#regional-profitability-analysis)
+  - [Regional Operating Cost Breakdown](#regional-operating-cost-breakdown)
+  - [Average Monthly Rent by Region](#average-monthly-rent-by-region)
+  - [Store-Level Profitability Analysis](#store-level-profitability-analysis)
+- [Recommendations](#recommendations)
+- [Conclusion](#conclusion)
+  
 ## Project Overview
 
 Sunrise Coffee Chain is a growing coffee retail business with 60 stores operating across 12 regions in the United Kingdom. Despite experiencing steady growth over the past five years, differences in store and regional profitability have raised concerns within the commercial team.
@@ -47,7 +61,7 @@ ON l.store_id = r.store_id
 GROUP BY  r.region
 ORDER BY profit_margin DESC
 ```
-### Result
+### Regional Profitability Analysis
 ![Regional Profitability Query Result](docs/Result%20SR1.JPG)
 
 The results show all regions and their respective performance indicators. Interestingly, London, the region with the highest revenue, **is the only region with a profit margin below 10%**, recording just 8.45%.
@@ -71,7 +85,7 @@ ON l.store_id = r.store_id
 GROUP BY region
 ```
 
-### Result
+### Regional Operating Cost Breakdown
 ![Regional Operating Cost Breakdown](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR2.JPG)
 
 The result above shows that London's rent ratio is notably higher than every other region, while its salary ratio is not the highest. This makes rent a strong area to investigate further.
@@ -90,7 +104,7 @@ GROUP BY region
 ORDER BY average_monthly_rent DESC
 ```
 
-### Result
+### Average Monthly Rent By Region
 ![Regional Profitability Analysis](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR3.JPG)
 
 Turns out London stores pay an average of £11,744.12 on rent making it the region that spends the most on rent, followed by South-East with £8,293.26 GBP. Interestingly, the difference of London and South-East average monthly rent is 83.38% of West-Midlands's average monthly rent.
@@ -115,7 +129,7 @@ WHERE region = 'London'
 GROUP BY store_name
 ORDER BY profit_margin DESC
 ```
-## Result
+## Store-Level Profitability Analysis
 ![Store-Level Profitability Analysis](https://raw.githubusercontent.com/SQLDrivenAbdul/Sunrise-Coffee-Chain-Regional-Performance-Analysis/main/docs/Result%20SR4.JPG)
 
 Interestingly, the London stores with the highest profit margins also maintain relatively lower salary or rent costs. Sunrise Coffee West London Quarter, for instance, spends just 18.49% of its revenue on salaries and records the highest profit margin at 20.54%. It is followed by Sunrise Coffee Central London House, with rent accounting for 17.59% of its revenue.
