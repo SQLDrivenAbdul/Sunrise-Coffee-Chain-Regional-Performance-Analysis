@@ -66,7 +66,7 @@ ORDER BY profit_margin DESC
 
 The results show all regions and their respective performance indicators. Interestingly, London, the region with the highest revenue, **is the only region with a profit margin below 10%**, recording just 8.45%.
 
-### Why Is This Happening?
+### But What's Eating Into London's Profits?
 
 This raises a further question: why is London's profit margin so low despite generating the highest revenue?
 
@@ -90,7 +90,6 @@ GROUP BY region
 
 The result above shows that London's rent ratio is notably higher than every other region, while its salary ratio is not the highest. This makes rent a strong area to investigate further.
 
-### Let's go!!!
 Now, let's investigate the average monthly rent  in the regions.
 
 ```sql
