@@ -41,7 +41,7 @@ Management needs a clearer understanding of store-level and regional profitabili
 ## Tools and Technologies
 
 - **SQL:** Data exploration, querying, and analysis of store-level and regional profitability.
-- **Power BI:** Data visualization and dashboard development to communicate findings and business insights.
+- **Microsoft Excel:** Data visualization and dashboard development to communicate findings and business insights.
 
 
 ## SQL-Based Exploratory Data Analysis
