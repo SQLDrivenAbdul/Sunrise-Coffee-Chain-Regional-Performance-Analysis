@@ -137,7 +137,7 @@ Interestingly, the London stores with the highest profit margins also maintain r
 At the bottom of the ranking is Sunrise Coffee South London Corner. Although rent accounts for just 13.31% of its revenue, staffing costs consume more than 50%, significantly affecting its profitability.
 
 ## Data Visualization
-![Sunrise Coffee Chain Power BI Dashboard](docs/SR%20Data%20Viz.JPG)
+![Sunrise Coffee Chain Dashboard](docs/Sunrise%20Coffee%20Data%20Visualization.PNG)
 
 ## Recommendations
 
